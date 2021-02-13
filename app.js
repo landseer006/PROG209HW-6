@@ -27,6 +27,24 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
+app.get('/movies', function(req, res) {
+    res.render('pages/movies');
+});
+
+app.get('/tvshows', function(req, res) {
+   
+    let tvshowObject={
+        tvshow1:"Friends",
+        tvshow2:"Game of Thrones",
+        tvshow3:"The Office",
+        tvshow4:"Parks and Recreation"
+    };   
+   
+    res.render('pages/tvshows',{
+        tvshows:tvshowObject
+    });
+});
+
 
 // upLoadData page 
 // sending a get with 1 param
