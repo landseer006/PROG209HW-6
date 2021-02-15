@@ -28,7 +28,13 @@ app.get('/about', function(req, res) {
 });
 
 app.get('/movies', function(req, res) {
-    res.render('pages/movies');
+    let movieObject={
+        movie1:"Bee Movie",
+        movie2:"Star Wars",
+        movie3:"Avengers",
+        movie4:"Black Panther"
+    }
+    res.render('pages/movies',{movies:movieObject});
 });
 
 app.get('/tvshows', function(req, res) {
